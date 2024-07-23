@@ -9,22 +9,9 @@
     font-family: "Mali", sans-serif;
     }
 
-    :global(.font-bold) {
+    .font-bold {
      font-family: "Itim", sans-serif;
     }
-
-    :global(.divider) {
-        background-image : linear-gradient(to right, rgba(255,0,0,0), 
-        rgba(223, 152, 156, 1), rgba(255,0,0,0));
-    }
-
-    :global(.bto) {
-        max-width: 88px;
-        max-height: 31px;
-        display: inline;
-    }
-
-
 </style>
 
 <slot />
