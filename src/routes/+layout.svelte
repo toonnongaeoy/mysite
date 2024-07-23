@@ -9,8 +9,13 @@
     font-family: "Mali", sans-serif;
     }
 
-    .font-bold {
+    :global(.font-bold) {
      font-family: "Itim", sans-serif;
+    }
+
+    :global(.divider) {
+        background-image : linear-gradient(to right, rgba(255,0,0,0), 
+        rgba(223, 152, 156, 1), rgba(255,0,0,0));
     }
 </style>
 

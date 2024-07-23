@@ -144,22 +144,17 @@ function toggleHiddenRow() {
         padding: 2rem;
     }
 
-    .link {
-        cursor: pointer;
-        color: blue;
-        text-decoration: underline;
-    }
-
-    .divider {
-    background-image : linear-gradient(to right, rgba(255,0,0,0), 
-	rgba(223, 152, 156, 1), rgba(255,0,0,0));
-    }
-
     .menu a{
         color: #890606;
         font-weight: bold;
         text-decoration: underline;
     }
+
+    .ma_bt {
+        margin-top: 3px;
+        color: #890606;
+        border: 3px double;
+    } 
 
     @media (max-width: 767px) {
         #webring-wrapper {
@@ -266,7 +261,7 @@ function toggleHiddenRow() {
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
         <span>Wanna break for modern age, Click here to go to retro version of this site! (Not quite suitable with your phone!)</span>
-        <img src="retro.svg" alt="Back to retro site!" style="max-width: fit-content;">
+        <img src="retro.svg" alt="Back to retro site!" style="max-width: fit-content;" class="ma_bt">
         <div class={`m-3 h-0.5 divider`}> </div>
         <div class="inline">
           <span class="font-bold">୨୧ Collective | </span>
@@ -274,7 +269,7 @@ function toggleHiddenRow() {
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
         <span>[Insert the logo here!]</span>
-      </div>
+          </div>
     </div>
   </div>
 </div>
