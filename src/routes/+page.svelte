@@ -1,6 +1,9 @@
 <script>
     import { fade } from 'svelte/transition';
     import { onMount } from 'svelte';
+    import Layout from './+layout.svelte';
+    let title = ''; // Reactive variable for the dynamic title
+    const fullTitle = "ToonStoryTime (ToonNongAoey)'s Site"; // The full title you want to display
 
     let isVisible = false;
 
@@ -76,9 +79,35 @@
     }));
   }
 
+/**
+    @param {number} i
+    */
+    function typeTitle(i) {
+    if (i < fullTitle.length) {
+      title += fullTitle[i];
+      setTimeout(() => typeTitle(i + 1), 250); // Adjust the speed of typing here
+    } else {
+      // Wait a bit before starting to delete the title
+      setTimeout(() => deleteTitle(fullTitle.length - 1), 1000); // Adjust the pause duration here
+    }
+  }
+    /**
+    @param {number} i
+    */
+  function deleteTitle(i) {
+    if (i >= 1) {
+      title = title.substring(0, i);
+      setTimeout(() => deleteTitle(i - 1), 200); // Adjust the speed of deleting here
+    } else {
+      // Wait a bit before starting to type again
+      setTimeout(() => typeTitle(1)); // Adjust the pause before typing again
+    }
+  }
+
 // Fetch the latest commit message and date on component mount
 onMount(async () => {
     try {
+      typeTitle(0);
       fetchRSSFeed();
       const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/commits?sha=${branch}`);
       if (response.ok) {
@@ -137,7 +166,12 @@ function toggleHiddenRow() {
             max-width: 50px;
         }
     }
-</style>  
+</style>
+
+<svelte:head>
+    <title>{title}</title>
+</svelte:head>
+    
 <div class="flex justify-center" transition:fade>
   <div class="container mx-auto px-4">
     <div class="inline">
@@ -232,7 +266,7 @@ function toggleHiddenRow() {
         </div>
         <div class={`m-3 h-0.5 divider`}> </div>
         <span>Wanna break for modern age, Click here to go to retro version of this site! (Not quite suitable with your phone!)</span>
-        <span>[Insert the logo here!]</span>
+        <img src="retro.svg" alt="Back to retro site!" style="max-width: fit-content;">
         <div class={`m-3 h-0.5 divider`}> </div>
         <div class="inline">
           <span class="font-bold">୨୧ Collective | </span>
