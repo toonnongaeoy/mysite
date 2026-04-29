@@ -174,12 +174,12 @@
 				<span class="text-2xl font-bold">Other</span>
 			</div>
 		</div>
-		<h2 class="text-2xl font-bold"><a href="#email">E-mail</a></h2>
+		<h2 class="text-2xl font-bold"><a href="mailto:me@toonshou.in">E-mail</a></h2>
 		<p>
 			&emsp;- There is a pretty simple thing that you can use to contact me, <b
 				><i>(or you tell me you don't have any e-mail.)</i></b
 			>
-			But since I hosted it myself, and I don't have much money to pay for the server (yet,) so right now, it unavailable for a while, but you can try to contact me via other ways than this!
+			You can send me to this e-mail <b><u>me (at) toonshou (dot) in</u></b> And I always check my inbox. So I will reply you within 1 - 2 day.
 		</p>
 		<h2 class="text-2xl font-bold">
 			Hack Club Slack
